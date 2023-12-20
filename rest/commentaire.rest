@@ -1,0 +1,40 @@
+# Liste des Commentaire (SELECT)
+
+###
+GET http://localhost:3050/listeCommentaire
+
+#  Ajout d'un commentaire (INSERT INTO)
+###
+POST http://localhost:3050/ajouterCommentaire
+Content-Type: application/json
+
+{
+  "texte": "Pain Melon",
+  "notation": 20,
+  "id_utilisateur": 1
+}
+
+# RECHERCHER UN COMMENTAIRE PAR L ID
+
+###
+GET http://localhost:3050/getCommentaireById/3
+
+# SUPPRIMER UN COMMENTAIRE PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerCommentaire/4
+
+# MODIFICATION D UN COMMENTAIRE PAR L ID (UPDATE)
+###
+PUT http://localhost:3050/modificationCommentaire/3
+Content-Type: application/json
+
+{
+  "nouveauxTexte": "Takoyaki",
+  "nouveauxNotation": 18,
+  "nouveauxIdUtilisateur": 1,
+  "supprimer": true
+}
+
+
+

@@ -1,0 +1,46 @@
+# Liste des Utilisateur (SELECT)
+
+###
+GET http://localhost:3050/listeUtilisateur
+
+# Ajout d'un utilisateur (INSERT INTO)
+
+###
+POST http://localhost:3050/ajouterUtilisateur
+Content-Type: application/json
+
+{
+  "MotDePasse": "eerer",
+  "Prenom": "Shana",
+  "Nom": "Yeux de braise",
+  "Adresse": "url.com",
+  "Role": "Admin"
+
+}
+
+
+# RECHERCHER UN UTILISATEUR PAR L ID
+
+###
+GET http://localhost:3050/getUtilisateurById/1
+
+
+# SUPPRIMER UN UTILISATEUR PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerUtilisateur/2
+
+# MODIFIER UN UTILISATEUR PAR L ID (UPDATE)
+
+###
+PUT http://localhost:3050/modificationUtilisateur/1
+Content-Type: application/json
+
+{
+  "nouveauxMotDePasse": "ezaatt",
+  "nouveauxPrenom": "Louise",
+  "nouveauxNom": "De La Valliere",
+  "nouveauxAdresse": "te",
+  "nouveauxRole": "te",
+  "supprimer": true
+}

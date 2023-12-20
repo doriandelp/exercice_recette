@@ -1,0 +1,42 @@
+# Liste des Informations (SELECT)
+
+###
+GET http://localhost:3050/listeInformation
+
+#  Ajout d'un information (INSERT INTO)
+###
+POST http://localhost:3050/ajouterInformation
+Content-Type: application/json
+
+{
+  "nom_information": "Pain Melon",
+  "type_information": "20",
+  "autre_information": "20",
+  "id_recette": 1
+}
+
+# RECHERCHER UNE INFORMATION PAR L ID
+
+###
+GET http://localhost:3050/getInformationById/1
+
+# SUPPRIMER UNE INFORMATION PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerInformation/3
+
+# MODIFICATION D UNE INFORMATION PAR L ID (UPDATE)
+###
+PUT http://localhost:3050/modificationInformation/1
+Content-Type: application/json
+
+{
+  "nouveauxNomInformation": "Pain",
+  "nouveauxTypeInformation": "12",
+  "nouveauxAutreInformation": "21",
+  "nouveauxIdRecette": 1,
+  "supprimer": true
+}
+
+
+

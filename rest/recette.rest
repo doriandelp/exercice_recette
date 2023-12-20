@@ -1,0 +1,48 @@
+# Liste des Recettes (SELECT)
+
+###
+GET http://localhost:3050/listeRecette
+
+# Ajout d'une recette (INSERT INTO)
+
+###
+POST http://localhost:3050/ajouterRecette
+Content-Type: application/json
+
+{
+  "nom": "Patate eee",
+  "description": "patate farineuse",
+  "etapes": "etape 3",
+  "url_etapes": "url.com",
+  "id": 3
+}
+
+# RECHERCHER UNE RECETTE PAR L ID
+
+###
+GET http://localhost:3050/getRecetteById/19
+
+###
+GET http://localhost:3050/getRecetteByNom/pates
+
+
+# SUPPRIMER UNE RECETTE PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerRecette/2
+
+# MODIFIER UNE RECETTE PAR L ID (UPDATE)
+
+
+###
+PUT http://localhost:3050/modificationRecette/4
+Content-Type: application/json
+
+{
+  "nouveauxNom": "PainMelon",
+  "nouveauxDescription": "e",
+  "nouveauxEtapes": "e",
+  "nouveauxUrlImage": "e",
+  "nouveauxId": 2,
+  "supprimer": true
+}

@@ -1,0 +1,43 @@
+# Liste des Ingredients (SELECT)
+
+###
+GET http://localhost:3050/listeIngredient
+
+# Ajout d'un Inredients (INSERT INTO)
+###
+POST http://localhost:3050/ajouterIngredient
+Content-Type: application/json
+
+{
+  "nom": "Takoyaki",
+  "prix_kilo": 3.00
+}
+
+
+
+# RECHERCHER D UN INGREDIENT PAR L ID
+
+###
+GET http://localhost:3050/getIngredientById/1
+
+
+# SUPPRIMER D UN INGREDINENT PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerIngredient/2
+
+
+# MODIFICATION d UN INGREDINENT PAR L ID (UPDATE)
+
+###
+PUT http://localhost:3050/modificationIngredient/4
+Content-Type: application/json
+
+{
+  "nouveauxNom": "PainMelon",
+  "nouveauxPrix": 3.00,
+  "supprimer": true
+}
+
+
+

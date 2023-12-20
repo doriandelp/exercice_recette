@@ -1,5 +1,5 @@
 const connection = require("../connexion.js");
-const Recette = require("../models/ingredients.js");
+const Recette = require("../models/ingredientsModel.js");
 
 async function getAllIngredient() {
   try {
@@ -9,7 +9,7 @@ async function getAllIngredient() {
 
     // Mapper les résultats pour créer des objets Recette
     const ingredients = results.map(
-      (result) => new Recette(result.id, result.nom, result.prix_kilo)
+      (result) => new Recette(result.nom, result.prix_kilo)
     );
 
     return ingredients;
@@ -64,10 +64,10 @@ async function deleteIngredient(id) {
   }
 }
 
-async function modificationIngredient(id, nouveauPrix) {
+async function modificationIngredient(id, nouveauxNom, nouveauxPrix) {
   try {
     await connection.connectToDatabase();
-    const query = `UPDATE ingredients SET prix_kilo = ${nouveauPrix} WHERE id = ${id}`;
+    const query = `UPDATE ingredients SET prix_kilo = ${nouveauxPrix}, nom = '${nouveauxNom}' WHERE id = ${id}`;
     await connection.executeQuery(query);
   } catch (error) {
     throw error;

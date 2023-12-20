@@ -1,0 +1,42 @@
+# Liste des Recettes (SELECT)
+
+###
+GET http://localhost:3050/listeCategorie
+
+
+# Ajout d'une categorie (INSERT INTO)
+
+
+###
+POST http://localhost:3050/ajouterCategorie
+Content-Type: application/json
+
+{
+  "nom_categorie": "Patate eee",
+  "type_categorie": "patate farineuse"
+}
+
+
+# RECHERCHER UNE CATEGORIE PAR L ID
+
+###
+GET http://localhost:3050/getCategorieById/1
+
+
+# SUPPRIMER UNE CATEGORIE PAR L ID (DELETE)
+
+###
+DELETE http://localhost:3050/supprimerCategorie/2
+
+
+# MODIFIER UNE CATEGORIE PAR L ID (UPDATE)
+
+###
+PUT http://localhost:3050/modificationCategorie/1
+Content-Type: application/json
+
+{
+  "nouveauxNomCategorie": "Takoyaki",
+  "nouveauxTypeCategorie": "Tako",
+  "supprimer": true
+}

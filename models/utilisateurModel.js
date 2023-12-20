@@ -1,10 +1,11 @@
 // moduls/recette.js
 class Utilisateur {
-  constructor(id_utilisateur, Prenom, Nom, Adresse) {
-    this.id_utilisateur = id_utilisateur;
+  constructor(MotDePasse, Prenom, Nom, Adresse, Role) {
+    this.MotDePasse = MotDePasse;
     this.Prenom = Prenom;
     this.Nom = Nom;
     this.Adresse = Adresse;
+    this.Role = Role;
   }
 }
 
